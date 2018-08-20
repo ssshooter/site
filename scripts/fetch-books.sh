@@ -11,6 +11,6 @@ for s in ${BOOKS[*]}; do
         git pull
         cd -
     else
-        git clone -b dev "https://github.com/ssshooter/$s.git" "books/$s"
+        git clone "https://github.com/ssshooter/$s.git" "books/$s"
     fi
 done
