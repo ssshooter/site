@@ -50,23 +50,6 @@ module.exports = {
         return index;
       },
     },
-    blog: {
-      content: () => require.context("./pages/blog", false, /^\.\/.*\.md$/),
-      index: () => {
-        const index = require("./layouts/BlogIndex").default;
-
-        index.title = "Blog";
-        index.description = "";
-
-        return index;
-      },
-      layout: () => require("./layouts/BlogPage").default,
-      transform: pages =>
-        generateAdjacent(_.sortBy(pages, "file.attributes.date")).reverse(),
-      url: ({ sectionName, fileName }) =>
-        `/${sectionName}/${clean.chapterName(fileName)}/`,
-      redirects: require("./redirects/blog"),
-    },
     clinic: {
       redirects: require("./redirects/clinic"),
     },
