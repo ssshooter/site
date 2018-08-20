@@ -14,28 +14,7 @@ module.exports = {
   template: {
     file: path.resolve(__dirname, "templates/page.ejs"),
   },
-  blog: {
-    author: React.createElement(
-      "a",
-      { href: "https://twitter.com/bebraw" },
-      "Juho Vepsäläinen"
-    ),
-  },
   output: "build",
-  plugins: [
-    rssPlugin({
-      baseUrl: "https://survivejs.com/",
-      sections: ["blog"],
-      get: {
-        content: page => page.file.body,
-        date: page =>
-          moment(page.file.attributes.date)
-            .utcOffset(0)
-            .format(),
-        title: page => page.file.attributes.title,
-      },
-    }),
-  ],
   layout: () => require("./layouts/SiteBody").default,
   paths: {
     "/": {

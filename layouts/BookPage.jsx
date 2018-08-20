@@ -2,7 +2,6 @@ import React from "react";
 
 import {
   Disqus,
-  LatestPost,
   Meta,
   PrevNextMini,
   Resources,
@@ -90,8 +89,6 @@ const BookPage = ({
       footer={footer}
       page={{ next, previous }}
     >
-      <LatestPost section={section} />
-
       <Meta demo={demo} endSource={endSource} />
 
       <div

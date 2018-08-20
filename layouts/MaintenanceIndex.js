@@ -1,5 +1,4 @@
 import React from "react";
-import LatestPost from "../components/LatestPost";
 import VisuallyHidden from "../components/VisuallyHidden";
 import {
   Landing,
@@ -43,7 +42,6 @@ const MaintenanceIndex = ({ section }) => (
     </div>
 
     <Landing>
-      <LatestPost section={section} />
       <Container>
         <WideColumn>
           <VisuallyHidden>

@@ -1,5 +1,4 @@
 import React from "react";
-import LatestPost from "../components/LatestPost";
 import {
   Landing,
   Container,
@@ -32,7 +31,6 @@ const SiteIndex = ({ section }) => (
     </div>
 
     <Landing>
-      <LatestPost section={section} />
       <Books aria-label="Books">
         <Book>
           <Heading>SurviveJS — Maintenance</Heading>

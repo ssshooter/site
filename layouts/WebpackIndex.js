@@ -1,6 +1,5 @@
 import React from "react";
 import { Testimonial } from "@survivejs/components";
-import LatestPost from "../components/LatestPost";
 import VisuallyHidden from "../components/VisuallyHidden";
 import {
   Landing,
@@ -69,7 +68,6 @@ const WebpackIndex = ({ section }) => (
     </div>
 
     <Landing>
-      <LatestPost section={section} />
       <Container>
         <WideColumn>
           <VisuallyHidden>

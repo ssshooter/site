@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 import { GitterChat } from "@survivejs/components";
-import { Footer, Navigation, Search } from "../components";
+import { Navigation, Search } from "../components";
 
 import "../styles/custom.scss";
 import "../styles/prism.css";
@@ -16,10 +16,6 @@ const navigationPages = [
   {
     title: "Home",
     url: "/",
-  },
-  {
-    title: "Read the blog",
-    url: "/blog/",
   },
   {
     title: "Maintenance book",
@@ -48,8 +44,6 @@ const SiteBody = ({ children, section, page, location: { pathname } }) => (
     <Navigation pages={navigationPages} pathname={pathname} page={page} />
 
     {children}
-
-    <Footer section={section} pathname={pathname} />
 
     <GitterChat sectionName={section.name} />
 
