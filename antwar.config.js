@@ -17,18 +17,6 @@ module.exports = {
   output: "build",
   layout: () => require("./layouts/SiteBody").default,
   paths: {
-    "/": {
-      content: () => require.context("./pages", false, /^\.\/.*\.md$/),
-      index: () => {
-        const index = require("./layouts/SiteIndex").default;
-
-        index.title = "SurviveJS";
-        index.description =
-          "Want to learn how to manage your JavaScript projects? Get started for free.";
-
-        return index;
-      },
-    },
     clinic: {
       redirects: require("./redirects/clinic"),
     },
